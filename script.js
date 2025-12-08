@@ -45,5 +45,49 @@
 
 
 
+//___________________________________________ HERO DATE _________________________________________________________________
+
+const dateData = new Date();
+const year = dateData.getFullYear();
+let month = dateData.getMonth();
+let date = dateData.getDate();
+let day = dateData.getDay();
+switch(day){
+    case 0: day='Monday';break;
+    case 1: day='Tuesday';break;
+    case 2: day='Wednesday';break;
+    case 3: day='Thursday';break;
+    case 4: day='Friday';break;
+    case 5: day='Saturday';break;
+}
+switch(month){
+    case 0: month='January';break;
+    case 1: month='February';break;
+    case 2: month='March';break;
+    case 3: month='April';break;
+    case 4: month='May';break;
+    case 5: month='June';break;
+    case 6: month='July';break;
+    case 7: month='August';break;
+    case 8: month='September';break;
+    case 9: month='October';break;
+    case 10: month='November';break;
+    case 11: month='December';break;
+}
+switch(date){
+    case 1: date=date+'st';break;
+    case 2: date=date+'nd';break;
+    case 3: date=date+'rd';break;
+    default: date=date+'th';break;
+}
+const dateText = document.getElementById("date");
+dateText.textContent= `It's ${day}, ${month} ${date}.`;
 
 
+//___________________________________________HERO HEADLINE_________________________________________________________________
+let headline = document.getElementById("headline");
+headline.textContent='Be ready for every day'
+
+
+
+    

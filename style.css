@@ -14,13 +14,16 @@ a{
     color: #999;
     text-decoration: none;
 }
-/******************************************************   NAV-BAR   **********************************************************/
+h1,h2,h3,h4,h5,h6,p:hover{
+    cursor: default;
+}
+/******************************************************   NAV-BAR   **********************************************************/   
 .nav-bar{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: #f7f7f7;
+    background-color: #f0efef90;
     height: 5rem;
 }
 .nav-bar1{
@@ -35,10 +38,11 @@ a{
     display: flex;
     flex-direction: row;
     font-size: large;
+    font-weight: bold;
     height: 100%;
 }
 .nav-el{
-    color: gray;
+    color: #aba4a6;
     height: 100%;
     display: flex;
     align-items: center;
@@ -46,17 +50,11 @@ a{
     padding: 0 1.5rem;
 }
 .nav-el:hover{
-    color: rgb(0, 0, 0);
+    color: #656d4a;
 }
-
 /******************************************************   HERO  **********************************************************/
 .hero{
-
-    
-    height: 500px;
-
-
-
+    height: 60vh;
     background-image: 
         linear-gradient(
             to bottom, 
@@ -65,10 +63,139 @@ a{
         ),
         url(images/bg-image2.jpg);
     background-size:cover;
-
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding-left: 2rem;
 }
-
+#date{
+    font-weight: 400;
+    font-size: 2rem;
+}
+#headline{
+    font-size: 5rem;
+}
+.searchbar{
+    background-color: #f7f7f7;
+    border-radius: 4%/50%;
+    height: 10%;
+    width: 50%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+.searchbar i{
+    width: 5%;
+    margin-left: 1%;
+    font-size: 1.5rem;
+}
+.searchbar input{
+    height: 100%;
+    width:85%;
+    background-color: rgba(0,0,0,0);
+    border: 0;
+    font-size: 1.2rem;
+}
+.searchbar input:focus {
+    outline: none;
+}
 /******************************************************   WEATHER   **********************************************************/
+.weather{
+}
 /******************************************************   FEEDBACK   **********************************************************/
+.feedback{
+    background-color: #656d4a;
+    height:25vh;
+    padding-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.feedback h1{
+    color: white;
+    font-size: 4rem;
+}
+.feedback button{
+    height: 60px;
+    width: 300px;
+    color: #656d4a;
+    background-color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 20px;
+    border:2px solid white;
+    transition:background-color 0.5s,color 0.8s;
+}
+.feedback button:hover{
+    background-color:#656d4a;
+    color: white;
+    cursor: pointer;
+    transition:background-color 0.5s,color 0.5s;
+    
+}
 /******************************************************   ABOUT   **********************************************************/
 /******************************************************   FOOTER   **********************************************************/
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50vh;
+    background-color: #eae0d5;
+}
+.footer1{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    /* height: 70%; */
+}
+.footer1 ul{
+    width: 20%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #936639;
+    cursor: default;
+}
+.footer1 ul li{
+    font-weight: 200;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.footer1 ul li:hover{
+    color:#a4ac86;
+    transition: color 0.3s;
+}
+.footer2{
+    font-size: 3rem;
+}
+.footer2 i{
+    color: black;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+.footer2 i:hover{
+    color: #a4ac86;
+    transition: color 0.3s;
+}
+.footer3{
+    cursor: default;
+}
+.footer4{
+    font-size: 2rem;
+    color: #999;
+    transition: color 0.5s;
+}
+.footer4:hover{
+    color: red;
+    transition: color 0.5s;
+    cursor: default;
+}
+.footer4 i{
+    color: red;
+}
