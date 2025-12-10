@@ -14,12 +14,12 @@
             <img src="images/logo3.png" alt="">
         </a>
         <div class="nav-bar2">
-            <a href='#' class="nav-el">Home</a>
-            <a href='#headline' class="nav-el">Search</a>
-            <a href='#weather' class="nav-el">Weather</a>
-            <a href='#about' class="nav-el">About</a>
-            <a href='#footer' class="nav-el">Contact Us</a>
-            <a href='#' class="nav-el">Sign In</a>
+            <a href='javascript:scrollHome()' class="nav-el">Home</a>
+            <a href='javascript:scrollSearch()' class="nav-el">Search</a>
+            <a href='javascript:scrollWeather()' class="nav-el">Weather</a>
+            <a href='javascript:scrollAbout()' class="nav-el">About</a>
+            <a href='javascript:scrollContact()' class="nav-el">Contact Us</a>
+            <a href='signin.html' class="nav-el" target="_blank">Sign In</a>
         </div>
     </div>
     <div id="hero" class="hero">
@@ -39,6 +39,7 @@
             </ul>
         </div>
     </div>
+    <div id="btnContainer"><button type="button" id="upBtn"><i class="fa-solid fa-angles-up"></i></button></div>
     <div id="weather" class="weather">
         <h1 class="city" ><i class="fa-solid fa-location-dot"></i> <span id="city">City</span> <button id="refresh"><i class="fa-solid fa-arrows-rotate"></i></button></h1>
         <p><span id="region">Region</span>, <span id="country">Country</span></p>
@@ -111,7 +112,7 @@
     </div>
     <div class="feedback">
         <h1>Have a suggestion for us?</h1>
-        <button>Fill feedback form <i class="fa-solid fa-heart"></i></button>
+        <a href="https://github.com/ayushmalik125" target="_blank"><button>Fill feedback form <i class="fa-solid fa-heart"></i></button></a>
     </div>
     <div id="about" class="about">
         <div class="about1">
@@ -165,12 +166,13 @@
                 <li>Travel</li>
             </ul>
         </div>
-        <a href="#" class="footer2">
-            <i class="fa-brands fa-threads"></i>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-telegram"></i>
-        </a>
+        <div class="footer2">
+            <a href="https://www.threads.com/@narendramodi1777" target="_blank"><i class="fa-brands fa-threads"></i></a>
+            <a href="https://www.facebook.com/narendramodi/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/ayush_malik406/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://t.me/ayushmalik125" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://github.com/ayushmalik125" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
         <div class="footer3">
             The Weather Network
             <i class="fa-regular fa-copyright"></i>
@@ -179,8 +181,8 @@
         <div class="footer4">
             MADE WITH <i class="fa-solid fa-heart"></i> BY AYUSH
         </div>
-
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

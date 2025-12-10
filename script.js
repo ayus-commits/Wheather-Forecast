@@ -1,3 +1,35 @@
+//___________________________________________ scroll into view _________________________________________________________________
+function scrollHome(){
+    document.getElementById("hero").scrollIntoView({
+        behavior:"smooth",
+        block:"start" 
+    });
+}
+function scrollSearch(){
+    document.getElementById("search").scrollIntoView({
+        behavior:"smooth",
+        block:"center" 
+    });
+}
+function scrollWeather(){
+    document.getElementById("weather").scrollIntoView({
+        behavior:"smooth",
+        block:"start" 
+    });
+}
+function scrollAbout(){
+    document.getElementById("about").scrollIntoView({
+        behavior:"smooth",
+        block:"start" 
+    });
+}
+function scrollContact(){
+    document.getElementById("footer").scrollIntoView({
+        behavior:"smooth",
+        block:"start" 
+    });
+}
+
 //___________________________________________HERO HEADLINE_________________________________________________________________
 let headline = document.getElementById("changeHeadline");
 const textLoad = () =>{
@@ -23,6 +55,17 @@ refreshEl.addEventListener('click', () => {
             setTimeout((()=>{refreshEl.classList.toggle('clicked');}) ,1000);
             refreshEl.classList.toggle('clicked');
         });
+
+//___________________________________________ UP BUTTON _________________________________________________________________
+const upBtn = document.getElementById("upBtn");
+if (upBtn) {
+    upBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
 
 //___________________________________________ HERO DATE _________________________________________________________________
 
