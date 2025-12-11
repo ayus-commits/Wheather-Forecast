@@ -171,7 +171,8 @@ h1,h2,h3,h4,h5,h6,p:hover{
     font-size: 1.5rem;
     padding: 0.75rem 3rem;
     color: rgb(255, 255, 255);
-    border: 1px solid rgb(0, 0, 0);
+    margin-top: 0.5rem;
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 3rem;
     transition: background-color 0.2s;
 }
@@ -207,17 +208,46 @@ h1,h2,h3,h4,h5,h6,p:hover{
     box-shadow: 0 0 1rem black;
 }
 /******************************************************   WEATHER   **********************************************************/
+:root{
+    --background:linear-gradient(
+            to bottom, 
+            rgb(255, 255, 255) 0%,
+            rgba(255, 255, 255, 0.2) 20%,
+            rgba(255, 255, 255, 0.05) 50%,
+            rgba(255, 255, 255, 0.2) 80%,
+            rgb(255, 255, 255) 100%
+        ),
+        url(images/bg.png);
+    --color1:rgb(0, 0, 0);
+    --color2:rgb(126, 126, 126);
+}
+.dark{
+    --background: linear-gradient(
+            to bottom, 
+            rgb(255, 255, 255) 0%,
+            rgba(255, 255, 255, 0.2) 20%,
+            rgba(255, 255, 255, 0.05) 50%,
+            rgba(255, 255, 255, 0.2) 80%,
+            rgb(255, 255, 255) 100%
+        ),
+        url(images/bg-dark.png);
+    --color1:rgb(255, 255, 255);
+    --color2:rgb(229, 229, 229);
+}
+
+
 .weather{
     font-size: 2rem;
-    height: 180vh;
+    height: 230vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background-image: url(images/background.jpg);
     background-size:cover;
     padding-top: 10rem;
+    background-image: var(--background);
+    color: var(--color1);
 }
 .fa-location-dot{
     color: #f5bc03;
@@ -236,16 +266,16 @@ h1,h2,h3,h4,h5,h6,p:hover{
     transition: rotate 1s ;
 }
 .weather p{
-    color: grey;
+    color: var(--color2);
     font-size: 1.5rem;
 }
 #today{
-    color: gray;
+    color: var(--color2);
     margin-top: 1rem;
     margin-bottom: 2rem;
 }
 .currTemp{
-    background-color: rgba(255, 255, 255, 0.283);
+    background-color: rgba(255, 255, 255, 0);
     width: 38rem;
     height: 12rem;
     display: flex;
@@ -253,8 +283,9 @@ h1,h2,h3,h4,h5,h6,p:hover{
     justify-content: space-evenly;
     align-items: center;
     border-radius: 5rem;
-    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.225);
+    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.5);
     transition: box-shadow,transform 0.3s ;
+    backdrop-filter: blur(10px);
 }
 .currTemp img{
     width:100px
@@ -273,12 +304,14 @@ h1,h2,h3,h4,h5,h6,p:hover{
     padding:0.7rem 1.4rem;
     margin-top: 1rem;
     margin-bottom: 5rem;
-    background-color: rgba(255, 255, 255, 0.283);
+    background-color: rgba(255, 255, 255, 0);
     border: none;
-    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.225);
+    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.5);
     border-radius: 2rem;
     transition: box-shadow,transform 0.3s ;
     font-size: 1.2rem;
+    color: var(--color1);
+    backdrop-filter: blur(10px);
 }
 #celFer:hover{
     transform: scale(1.1);
@@ -495,7 +528,7 @@ h1,h2,h3,h4,h5,h6,p:hover{
     flex-direction: row;
 }
 .about1 img,.about2 img,.about3 img{
-   height: 110%;
+   height: 90%;
 }
 .abouttext{
     width: 40%;

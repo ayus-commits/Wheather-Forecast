@@ -174,6 +174,19 @@ try {
 
 
 
+    if(data.current.is_day===1){
+        document.getElementById("weather").classList.remove("dark");
+    }
+    else{document.getElementById("weather").classList.add("dark");
+    }
+
+    
+    
+    
+
+
+
+
     const array=data.forecast.forecastday[0].hour;
     const hourlyList = document.getElementById("hourlyList");
     hourlyList.innerHTML = '';
@@ -281,7 +294,7 @@ try {
         if(event.key==='Enter'){
             //PLEASE ENTER SOMETHING
             console.log('plz enter somthng before pressing enter');
-            searchOptions.innerHTML = '<li class="searchWarning">Please enter something.</li>';
+            searchOptions.innerHTML = '<li class="searchWarning">Please enter a city name.</li>';
             // console.log('plz enter somthng before pressing enter key');
         }
         else{console.log('input cleared')}
@@ -305,7 +318,7 @@ try {
             return;
         }
         else{
-            searchOptions.innerHTML = '<li class="searchWarning">No match found.</li>';
+            searchOptions.innerHTML = '<li class="searchWarning">Not found.</li>';
             return;
         }
     }
@@ -329,7 +342,7 @@ try {
     //IF ONE OF THE OPTIONS IS CLICKED
     NewSearchList=document.getElementsByClassName("searchEl");
     if(NewSearchList.length===0){
-        searchOptions.innerHTML = '<li class="searchWarning">No match found.</li>';
+        searchOptions.innerHTML = '<li class="searchWarning">Not found.</li>';
         return;
     }
     for(let i=0; i<NewSearchList.length && i<5 ;i++){
