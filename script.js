@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         //guest
         document.getElementsByClassName("nav-el")[5].textContent='Log in';
         document.getElementsByClassName("nav-el")[5].href='login.html';
-        document.getElementById("message").innerText=`Welcome to The Weather Network`;
+        document.getElementById("message").style.display='none';
     }
 })
 
@@ -56,15 +56,21 @@ function scrollContact(){
         block:"start" 
     });
 }
+//___________________________________________ hamburger _________________________________________________________________
+document.getElementById("hamburger").addEventListener('click',()=>{
+    document.getElementById("hamburger").classList.toggle("active");
+    document.getElementsByClassName("nav-bar2")[0].classList.toggle("active");
+})
+
 
 //___________________________________________HERO HEADLINE_________________________________________________________________
 let headline = document.getElementById("changeHeadline");
 const textLoad = () =>{
     setTimeout(()=>{
-        headline.textContent="day.";
+        headline.textContent="rain.";
     },0)
     setTimeout(()=>{
-        headline.textContent="moment.";
+        headline.textContent="change.";
     },2000)
     setTimeout(()=>{
         headline.textContent="season.";
@@ -109,6 +115,7 @@ getday= (day)=>{
         case 3: day='Thursday';break;
         case 4: day='Friday';break;
         case 5: day='Saturday';break;
+        case 6: day='Sunday';break;
     }
     return day;
 }
