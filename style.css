@@ -91,15 +91,22 @@ h1,h2,h3,h4,h5,h6,p:hover{
     color: rgb(255, 255, 255);
     /* margin-top:2rem ; */
 }
+#message{
+    text-shadow: 0 0 10px rgb(121, 121, 121); 
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    font-size: 3rem
+}
 #headline{
     font-size: 5rem;
     color: #ffffff;
-    text-shadow: 1px 1px black;
+    text-shadow: 0px 0px 5px black;
     align-self: flex-start;
     margin-left: 20%;
 }
 #changeHeadline{
     color:#49573f;
+    text-shadow: 0 0 50px rgb(255, 255, 255);
     /* animation-name: animation;
     animation-iteration-count: infinite;
     animation-duration: 2000ms; */
@@ -302,10 +309,9 @@ h1,h2,h3,h4,h5,h6,p:hover{
 .currTemp2 p{
     font-size: 1.3rem;
 }
-#celFer{
+#celFer ,#favBtn{
     padding:0.7rem 1.4rem;
     margin-top: 1rem;
-    margin-bottom: 5rem;
     background-color: rgba(255, 255, 255, 0);
     border: none;
     box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.5);
@@ -314,6 +320,9 @@ h1,h2,h3,h4,h5,h6,p:hover{
     font-size: 1.2rem;
     color: var(--color1);
     backdrop-filter: blur(10px);
+}
+body #favBtn{
+    margin-bottom: 5rem;
 }
 #celFer:hover{
     transform: scale(1.1);

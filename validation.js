@@ -10,19 +10,65 @@ formEl.addEventListener('submit',(e)=>{
     if(fnameEl=== null){
         //signin
         signInFormValidation(emailEl.value,passwordEl.value);
+        if(errors.length>0){
+            e.preventDefault();
+            errorMsgEl.innerHTML=errors.join('<br>');
+            return;
+        }
+
+        const email=emailEl.value;
+        const encryptedpassword=btoa(passwordEl.value);
+
+        if(!localStorage.getItem(email)){
+            errorMsgEl.innerText="User doesn't exist";
+            e.preventDefault();
+            formEl.reset();
+            return;
+        }
+        user=JSON.parse(localStorage.getItem(email));
+        e.preventDefault();
+        if(user.encryptedpassword===encryptedpassword){
+            localStorage.setItem('currentUser',JSON.stringify(user));
+            window.location.href='index.html';
+        }
+        else{
+            e.preventDefault();
+            errorMsgEl.innerText='Wrong Password';
+            passwordEl.parentElement.classList.add('incorrect');
+            // passwordEl.reset();
+            passwordEl.value='';
+            return;
+        }
+
     }
     else{
         //signup
         signUpFormValidation(fnameEl.value,emailEl.value,passwordEl.value);
-    }
-    if(errors.length>0){
-        e.preventDefault();
-        errorMsgEl.innerHTML=errors.join('<br>');
-    }
+        if(errors.length>0){
+            e.preventDefault();
+            errorMsgEl.innerHTML=errors.join('<br>');
+            return;
+        }
 
-    let fname=fnameEl.value;
-    let email=emailEl.value;
-    let password=passwordEl.value;
+        const fname=fnameEl.value;
+        const email=emailEl.value;
+        const encryptedpassword=btoa(passwordEl.value);
+
+        
+        if(localStorage.getItem(email)){
+            alert('User already exists.Please Login');
+            return;
+        }
+        const user ={
+            fname:fname,
+            email:email,
+            encryptedpassword:encryptedpassword,
+            prefrences:[]
+        }
+        localStorage.setItem(email,JSON.stringify(user));
+        alert('Signup Successful.You can now login.');
+        // formEl.reset();
+    }
 })
 const inputEls = [fnameEl, emailEl, passwordEl].filter((el) => el !== null);
 inputEls.forEach((el)=>{

@@ -1,3 +1,29 @@
+//___________________________________________ check logged in _________________________________________________________________
+document.addEventListener('DOMContentLoaded', ()=>{
+    const userStr = localStorage.getItem('currentUser');
+
+    if(userStr){
+        //logged in
+        const user = JSON.parse(userStr);
+        document.getElementsByClassName("nav-el")[5].textContent='Sign out';
+        document.getElementsByClassName("nav-el")[5].href='login.html';
+        document.getElementById("message").innerText=`Welcome, ${user.fname}`;
+        document.getElementsByClassName("nav-el")[5].addEventListener('click',()=>{
+            localStorage.removeItem('currentUser');
+        })
+    }
+    else{
+        //guest
+        document.getElementsByClassName("nav-el")[5].textContent='Log in';
+        document.getElementsByClassName("nav-el")[5].href='login.html';
+        document.getElementById("message").innerText=`Welcome to The Weather Network`;
+    }
+})
+
+
+
+
+
 //___________________________________________ scroll into view _________________________________________________________________
 function scrollHome(){
     document.getElementById("hero").scrollIntoView({
