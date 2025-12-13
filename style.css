@@ -327,14 +327,15 @@ p:hover {
 }
 
 /******************************************************   button   **********************************************************/
-#btnContainer {
-  position: sticky;
-  top: 90vh;
+/* #btnContainer {
+  position: fixed;
+  bottom: 5vh;
+  right: 1vw;
   display: flex;
   justify-content: flex-end;
   padding-right: 1rem;
   z-index: 100;
-}
+} */
 #upBtn {
   border-radius: 50%;
   width: 4rem;
@@ -345,6 +346,9 @@ p:hover {
   color: rgba(255, 255, 255, 0.768);
   transition: background-color 0.3s, color 0.3s, scale 0.3s, box-shadow 0.3s;
   z-index: 100;
+  position: fixed;
+  bottom: 2vh;
+  right: 2vw;
 }
 #upBtn:hover {
   scale: 1.1;
@@ -352,6 +356,16 @@ p:hover {
   color: rgb(255, 255, 255);
   cursor: pointer;
   box-shadow: 0 0 1rem black;
+}
+@media screen and (max-width: 1000px) {
+  /* #btnContainer{
+    top: 85vh;
+  } */
+  #upBtn{
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+  }
 }
 /******************************************************   WEATHER   **********************************************************/
 :root {
