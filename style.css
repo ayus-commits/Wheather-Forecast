@@ -913,7 +913,7 @@ h1,h2,h3,h4,h5,h6,p:hover{
     font-size: 2rem;
     color: #ffffff;
     transition: color 0.5s ;
-    z-index: 2;
+    z-index: 10;
     white-space: nowrap;
 }
 .footer4:hover{
