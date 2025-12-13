@@ -307,7 +307,7 @@ h1,h2,h3,h4,h5,h6,p:hover{
     display: flex;
     justify-content: flex-end;
     padding-right: 1rem;
-    z-index: 5;
+    z-index: 1;
 }
 #upBtn{
     border-radius: 50%;
@@ -913,12 +913,12 @@ h1,h2,h3,h4,h5,h6,p:hover{
     font-size: 2rem;
     color: #ffffff;
     transition: color 0.5s ;
-    z-index: 2;
+    z-index: 100;
     white-space: nowrap;
 }
 .footer4:hover{
     transition: color 0.5s;
-    cursor: crosshair;
+    cursor: pointer;
 }
 .footer4:hover i{
     color: rgb(255, 0, 0);
@@ -927,7 +927,6 @@ h1,h2,h3,h4,h5,h6,p:hover{
 }
 .footer4 i{
     color: rgb(255, 64, 64);
-    z-index: 2;
     transition: color 0.5s , scale 1s , text-shadow 0.5s;
 }
 
